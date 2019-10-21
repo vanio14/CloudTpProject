@@ -13,3 +13,31 @@ h2
 h1{
     @extend h2;
 }
+ul
+{
+    list-style: none;
+}
+.navigation 
+{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+li
+{
+    height: auto;
+    width: 450px;
+    background-color: red;
+    color:black;
+    overflow: auto;
+    padding: 6px;
+    margin-top: 8px;
+}
+
+
+
+
+li:nth-child(even) {
+    background-color: #ec8b68;
+  }
+

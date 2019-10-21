@@ -1,12 +1,51 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+let contenElement: HTMLDivElement = <HTMLDivElement>document.getElementById("content");
+let inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById("myInput");
+let buttonElement: HTMLButtonElement = <HTMLButtonElement>document.getElementById("myButton");
+let selectElement: HTMLSelectElement = <HTMLSelectElement>document.getElementById("options");
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
+buttonElement.addEventListener("click",
+    (getChildrensChildren:any) => {
+        var par = document.createElement("li");
+        var element = document.getElementById("newLine");
+        var numberOfChildren = element.childElementCount + 1;
+        var setNumberOfChildren = numberOfChildren;
+        
+        switch (selectElement.value) {
+            case "UpperCase":
+                {
+                    var aa = inputElement.value.toUpperCase();
+                    break;
+                }
+            
+            case "LowerCase":
+                {
+                    var aa = inputElement.value.toLowerCase();
+                    break;
+                }
+        }
+        if(aa.length != 0)
+        {
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+               par.innerHTML = aa;
+               var xd= "" + numberOfChildren++;   
+               var y = document.getElementById("newLine").append(xd, par ); 
+          
+            }
+        else
+        {
+            window.alert("Write something");
+        }
+  
+       
+         
+        console.log(xd)
+             
+       
+        
+    });
+
+
+
+
+
+
